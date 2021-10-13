@@ -20,6 +20,12 @@ namespace password_history.Controllers
             _kvMgr = kvm;
         }
 
+        [HttpGet()]
+        public IActionResult Index()
+        {
+            return Ok("Pass hash service.");
+        }
+
         [HttpPost()]
         public async Task<IActionResult> Post([FromBody] PassHashModel body)
         {
